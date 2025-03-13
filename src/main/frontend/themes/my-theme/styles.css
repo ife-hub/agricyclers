@@ -1,0 +1,138 @@
+.signUpBody {
+    background: #FFF;
+    width: 1440px;
+    height: 1131px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.signUpLeft2{
+    height: 100vh;
+}
+
+.signUpLeft {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 505px;
+    padding-left: 100px;
+    padding-top: 20px;
+}
+
+.signUpLine3{
+    color: #8692A6;
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%;
+}
+
+.aglogo {
+    padding-left: 100px;
+    width: 227.556px;
+    height: 36px;
+    flex-shrink: 0;
+    aspect-ratio: 227.56/36.00;
+}
+
+.signUpSubmitButton{
+    color: white;
+    cursor: pointer;
+    display: flex;
+    padding: 15.5px 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    background: var(--Colour-Primary-primary-500, #2AC652);
+    align-self: stretch;
+}
+
+.signUpSubmitButton2 {
+    display: flex;
+    padding: 15.5px 20px;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    border-radius: 6px;
+    background: var(--Black, #100F14);
+    color: white;
+    cursor: pointer;
+}
+
+.googleImage {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.signUpSubmitButton, .signUpSubmitButton2 {
+    height: 4.5vh;
+}
+
+.signUpT {
+    --vaadin-input-field-border-width: 1px;
+    --vaadin-input-field-background: #FFF;
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+    align-self: stretch;
+    --vaadin-input-field-height: 4.5vh;
+    --vaadin-input-field-placeholder-color: var(--G400, #9794AA);
+    --vaadin-input-field-label-color: var(--G300, #CBCAD7);
+}
+
+.signUpT:focus-within::part(label){
+    color: var(--Colour-Primary-primary-500, #2AC652);
+}
+
+.jojoLogo {
+    display: flex;
+    width: 36.46vw;
+    height: 89.26vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 16px;
+}
+.signUpCB[checked]::part(checkbox){
+    background-color: var(--Colour-Primary-primary-500, #2AC652);
+}
+
+.signUpLine13{
+    color: #9794AA !important;
+}
+
+.signUpLine13:hover{
+    text-decoration: none;
+}
+.line11 hr{
+    background: var(--G500, #686677);
+    width: 45%;
+}
+.line11 span{
+    color: var(--G300, #CBCAD7);
+    text-align: center;
+    font-family: Manrope;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+}
+
+@media screen and (max-width: 890px) {
+    .jojoLayout {
+        display: none !important;
+    }
+
+    .signUpLeft {
+        padding-left: 20px;
+    }
+
+    .aglogo {
+         padding-left: 20px;
+    }
+}
