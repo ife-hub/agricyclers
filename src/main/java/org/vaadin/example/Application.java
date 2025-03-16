@@ -19,8 +19,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 @PWA(name = "Project Base for Vaadin with Spring", shortName = "Project Base")
 @Theme("my-theme")
-@PageTitle("Agricyclers")
-@Meta(name = "viewport", content = "width=device-width, initial-scale=1")
+@PageTitle("Agricycler")
 public class Application implements AppShellConfigurator {
 
     public static void main(String[] args) {

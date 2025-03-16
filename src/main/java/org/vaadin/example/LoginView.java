@@ -15,7 +15,7 @@ import com.vaadin.flow.router.RouterLink;
 import lombok.extern.slf4j.Slf4j;
 import org.vaadin.addons.googlerecaptcha.RecaptchaComponent;
 
-@Route("/login")
+@Route(value = "login", layout = Layout.class)
 @Slf4j
 public class LoginView extends VerticalLayout {
 
