@@ -98,7 +98,6 @@
     display: flex;
     align-items: center;
     align-self: stretch;
-    align-self: stretch;
     --vaadin-input-field-height: 4.5vh;
     --vaadin-input-field-placeholder-color: var(--G400, #9794AA);
     --vaadin-input-field-label-color: var(--G300, #CBCAD7);
@@ -827,4 +826,373 @@ vaadin-app-layout::part(navbar) {
 .a2_div0{
     border-radius: 12px;
     width: 20vw;
+}
+
+.s_hl1a_text{
+    color: var(--Colour-Secondary-secondary-1000, #020A0F);
+    font-family: Inter;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    width: 80%;
+}
+.s_h1a{
+    color: var(--Colour-Secondary-secondary-1000, #020A0F);
+    font-family: Manrope;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%; /* 28.8px */
+}
+.s_h1b{
+    color: var(--Colour-Secondary-secondary-1000, #020A0F);
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 218%; /* 34.88px */
+    width: 80%;
+}
+.s_div1{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+.s_div2{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+.s_hl2_h2{
+    color: var(--Colour-Secondary-secondary-1000, #020A0F);
+    font-family: Manrope;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%; /* 22.4px */
+    letter-spacing: 0.7px;
+}
+.s_vl1{
+    width: 85vw !important;
+    justify-content: center;
+    padding-top: 6vh;
+}
+.s_hl1a_button{
+    border-radius: 100px;
+    border: 1px solid var(--Colour-Secondary-secondary-1000, #020A0F);
+    background: #FFF;
+    display: flex;
+    width: 16vw;
+    padding: 0px 18px;
+    justify-content: center;
+    align-items: center;
+    height: 4vh;
+    --vaadin-button-text-color: black;
+}
+.s_hl1a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+}
+.s_hl1a_text{
+    justify-content: start;
+}
+.s_hl1a_button{
+    justify-content: end;
+    cursor: pointer;
+}
+.s_hl2_h1{
+    color: var(--Colour-Secondary-secondary-1000, #020A0F);
+    font-family: Manrope;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.s_hl2{
+    padding-top: 10vh;
+}
+.s_hl2_h3{
+    color: var(--Colour-Secondary-secondary-1000, #020A0F);
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 218%; /* 34.88px */
+}
+.s_hl2_hl1{
+    display: flex;
+    align-items: center;
+    width: 85%;
+    justify-content: space-between;
+}
+.s_image1{
+    border-radius: 100px;
+    background: var(--Colour-Secondary-secondary-1000, #020A0F);
+    width: 40px;  /* Approximate for 1920px width */
+    height: 40px;
+    justify-content: end;
+}
+.s_hl2_hl1a{
+    justify-content: start;
+}
+@media screen and (max-width: 682px){
+    .s_div1, .s_div2 {
+        width: 100% !important;
+        justify-content: start !important;
+    }
+    .s_div2{
+        padding-top: 3vh;
+    }
+    .s_hl1a {
+                flex-direction: column;
+                width: 100%;
+    }
+    .s_hl1a_text{
+                        width: 100%;
+                        font-size: 35px;
+                    }
+    .s_hl1a_button{
+        width: 40%;
+        align-self: start;
+        --vaadin-button-font-size: 10px !important;
+    }
+}
+@media screen and (max-width: 1123px){
+    .s_hl1a_button{
+            --vaadin-button-font-size: 12px;
+        }
+}
+@media screen and (max-width: 847px){
+    .s_hl1a_button{
+            --vaadin-button-font-size: 7px !important;
+        }
+}
+.c_h1, .c_fir, .c_sec{
+    color: var(--Text2, #000);
+    font-family: Poppins;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+}
+.c_fir{
+    opacity: 0.5;
+}
+.c_h2{
+    color: #000;
+    font-family: Inter;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+}
+.c_h3, .c_h4{
+    color: #656565;
+    font-family: Manrope;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%;
+    letter-spacing: 0.9px;
+}
+.c_sh1, .c_sh2{
+    color: var(--Grays-Gray, var(--Grays-Gray, #8E8E93));
+    font-family: Manrope;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%;
+}
+.c_link1{
+    color: var(--Colour-Secondary-secondary-1000, #020A0F);
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+}
+.c_3, .c_6, .c_9{
+    color: #656565;
+    font-family: Manrope;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%; /* 28.8px */
+    letter-spacing: 0.9px;
+}
+.c_5, .c_8{
+    color: #656565;
+    font-family: Manrope;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%;
+    letter-spacing: 0.9px;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+}
+.c_vl1{
+    width: 80vw !important;
+    justify-content: center;
+}
+.c_t1, .c_t2, .c_t3, .c_t4{
+    width: 50vw;
+    --vaadin-input-field-height: 5vh;
+    --vaadin-input-field-background: #F5F5F5;
+}
+.c_hl1, .c_hl2{
+    display: flex;
+    justify-content: between;
+    gap: 5vw;
+}
+.c_ta{
+    width: 54.5vw;
+    --vaadin-input-field-height: 15vh;
+    --vaadin-input-field-background: #F5F5F5;
+}
+.c_but{
+    display: flex;
+            width: 11.46vw;
+            padding: 0vh 0.94vw;
+            justify-content: center;
+            align-items: center;
+            gap: 0.625px;
+            --vaadin-button-border-radius: 100px;
+            background: var(--Primary2, #2AC652);
+            --vaadin-button-text-color: var(--Gray-00, #FFF);
+            font-family: Inter;
+            --vaadin-button-font-size: 16px;
+            font-style: normal;
+            --vaadin-button-font-weight: 700;
+            line-height: 56px; /* 350% */
+            letter-spacing: 0.192px;
+            text-transform: uppercase;
+            height: 5.19vh;
+            cursor: pointer;
+}
+.c_vls1q, .c_vls2q{
+    display: none;
+}
+@media screen and (max-width: 736px){
+    .c_hl1, .c_hl2{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .c_t1, .c_t2, .c_t3, .c_t4, .c_ta {
+        width: 100%;
+    }
+    .c_vls2, .c_vls1{
+        display: none;
+    }
+    .c_vls1q, .c_vls2q{
+        display: block;
+    }
+    .c_vls1q{
+        padding-top: 2vh;
+    }
+    .c_but{
+        width: 25vw;
+        --vaadin-button-font-size: 12px;
+    }
+}
+@media screen and (max-width: 1387px){
+    .c_but{
+            width: 25vw;
+            --vaadin-button-font-size: 12px;
+        }
+}
+
+@media screen and (max-width: 430px){
+    .c_but{
+            width: 30vw;
+            --vaadin-button-font-size: 12px;
+        }
+    .c_h2{
+        font-size: 30px;
+    }
+    .c_h3, .c_h4{
+        font-size: 14px;
+    }
+    .c_3, .c_5, .c_6, .c_8, .c_9{
+        font-size: 14px;
+    }
+}
+.p_vl1 {
+    width: 85vw !important;
+    justify-content: center;
+}
+.p_h2{
+        color: var(--Text2, #000);
+        font-family: Poppins;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 200;
+        line-height: 21px;
+        opacity: 0.7;
+}
+.p_h3{
+        color: var(--Text2, #000);
+        font-family: Poppins;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 21px;
+        padding-top: 7vh;
+}
+.ac3_vla{
+    width: 50%;
+}
+.p_ac3_1, .p_ac3_2, .p_ac3_3{
+    cursor: pointer;
+}
+.p_ac3_vla{
+    width: 70% !important;
+}
+.p_but1{
+        display: flex;
+                width: 7vw;
+                padding: 0vh 0.94vw;
+                justify-content: center;
+                align-items: center;
+                gap: 0.625px;
+                --vaadin-button-border-radius: 100px;
+                background: var(--Primary2, #2AC652);
+                --vaadin-button-text-color: var(--Gray-00, #FFF);
+                font-family: Inter;
+                --vaadin-button-font-size: 16px;
+                font-style: normal;
+                --vaadin-button-font-weight: 700;
+                line-height: 56px; /* 350% */
+                letter-spacing: 0.192px;
+                text-transform: uppercase;
+                height: 4vh;
+                cursor: pointer;
+}
+.p_ta1{
+    width: 15vw;
+    --vaadin-input-field-height: 15vh;
+}
+.p_tf1, .p_tf2, .p_tf3{
+    width: 15vw;
+    --vaadin-input-field-height: 5vh;
+    --vaadin-input-field-background: #F5F5F5;
+}
+.p_ac3_1:hover, .active-span {
+    background:
+    border-radius: 10px;
+    padding: 5px;
 }

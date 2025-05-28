@@ -1,79 +1,94 @@
 package org.vaadin.example;
 
+import com.vaadin.flow.component.accordion.Accordion;
 import com.vaadin.flow.component.button.Button;
-import com.vaadin.flow.component.html.Div;
-import com.vaadin.flow.component.html.H1;
-import com.vaadin.flow.component.html.Hr;
-import com.vaadin.flow.component.html.Image;
+import com.vaadin.flow.component.html.*;
 import com.vaadin.flow.component.orderedlayout.FlexComponent;
 import com.vaadin.flow.component.orderedlayout.FlexLayout;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.component.textfield.TextArea;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.RouterLink;
 import lombok.extern.slf4j.Slf4j;
 
-@Route(value = "home", layout = Layout.class)
+@Route(value="products", layout=Layout.class)
 @Slf4j
-public class HomeView extends VerticalLayout {
+public class ProductView extends VerticalLayout {
+    private VerticalLayout rightVl;
 
-    public HomeView(){
+    public ProductView(){
         setWidthFull();
-        add(getlayer1(), getLayer2(), getLayer3(), getLayer4());
+        add(getLayer1(), getLayer4());
         setPadding(false);
         setSpacing(false);
     }
 
-    public VerticalLayout getlayer1(){
-        VerticalLayout vl = new VerticalLayout();
+    public VerticalLayout getLayer1(){
+        VerticalLayout vl = new VerticalLayout(); vl.addClassName("p_vl");
         vl.setDefaultHorizontalComponentAlignment(Alignment.CENTER);
-        setWidthFull();
-        vl.addClassName("hLayer1");
 
-        VerticalLayout vl1 = new VerticalLayout();
-        vl1.addClassName("h_vl1");
+        VerticalLayout vl1 = new VerticalLayout(); vl1.addClassName("p_vl1");
 
-        H1 fh1 = new H1("AGRICYCLERS");
-        fh1.addClassName("h_fh1");
-        H1 sh1 = new H1("Redefining Sustainability Through Eco-Friendly Solutions");
-        sh1.addClassName("h_sh1");
-        H1 th1 = new H1("Transforming Resources into Sustainable Opportunities, Paving the Way for a Greener Future");
-        th1.addClassName("h_th1");
+        H1 h1 = new H1(); h1.addClassName("p_h1");
+        h1.getElement().setProperty("innerHTML", "<h1><span class='c_fir'>Home / </span><span class='c_sec'>Products</span></h1>");
 
-        Image arrowIcon = new Image("icons/arrow.svg", "Arrow Icon");
-        arrowIcon.addClassName("arrowIcon");
-        arrowIcon.setWidth("20px");
+        HorizontalLayout hl = new HorizontalLayout(); hl.addClassName("p_hl");
 
-        Button shop = new Button("SHOP NOW", arrowIcon);
-        shop.addClassName("h_shopButton");
-        shop.setIconAfterText(true);
+        VerticalLayout vl1a = new VerticalLayout(); vl1a.addClassName("p_vl1a");
 
-        vl1.add(fh1, sh1, th1, shop);
+        H1 h2 = new H1("PRODUCT CATEGORIES"); h2.addClassName("p_h2");
 
+        Accordion ac1 = new Accordion(); ac1.addClassName("p_ac1");
+        ac1.add("Personal Care", new VerticalLayout());
+
+        Accordion ac2 = new Accordion(); ac2.addClassName("p_ac2");
+        ac2.add("Home Essentials", new VerticalLayout());
+
+        Accordion ac3 = new Accordion(); ac3.addClassName("p_ac3");
+        Span ac3_1 = new Span("Garbage Bin Bags"); ac3_1.addClassName("p_ac3_1");
+        ac3_1.addClickListener(event -> {
+            ac3_1.addClassName("active-span"); // Add active style
+        });
+        Span ac3_2 = new Span("Pet Poop Bags"); ac3_2.addClassName("p_ac3_1");
+        ac3_2.addClickListener(event -> {
+            ac3_2.addClassName("active-span"); // Add active style
+        });
+        Span ac3_3 = new Span("Shopping Bags"); ac3_3.addClassName("p_ac3_1");
+        ac3_3.addClickListener(event -> {
+            ac3_3.addClassName("active-span"); // Add active style
+        });
+        VerticalLayout ac3_vl = new VerticalLayout(); ac3_vl.addClassName("p_ac3_vl");
+        ac3_vl.setSpacing(false);
+        ac3_vl.setPadding(false);
+        VerticalLayout ac3_vla = new VerticalLayout(); ac3_vla.addClassName("p_ac3_vla");
+        ac3_vla.add(ac3_1, ac3_2, ac3_3);
+        ac3_vla.setSpacing(false);
+        ac3_vla.setPadding(false);
+        ac3_vl.add(ac3_vla);
+        ac3_vl.setDefaultHorizontalComponentAlignment(FlexComponent.Alignment.END);
+        ac3.add("Eco-Friendly Packaging & Waste Management", ac3_vl);
+
+        H1 h3 = new H1("Send your Inquiry"); h3.addClassName("p_h3");
+        TextField tf1 = new TextField("First Name"); tf1.addClassName("p_tf1");
+        TextField tf2 = new TextField("Email Address"); tf2.addClassName("p_tf2");
+        TextField tf3 = new TextField("Company Name"); tf3.addClassName("p_tf3");
+        TextArea ta1 = new TextArea("Content"); ta1.addClassName("p_ta1");
+
+        Button but1 = new Button("Send"); but1.addClassName("p_but1");
+
+        vl1a.add(h2, ac1, ac2, ac3, h3, tf1, tf2, tf3, ta1, but1);
+        VerticalLayout vl1b = getRightVl(); vl1b.addClassName("p_vl1b");
+
+        hl.add(vl1a, vl1b);
+        vl1.add(h1, hl);
         vl.add(vl1);
         return vl;
     }
 
-    public VerticalLayout getLayer2(){
+    public VerticalLayout getRightVl(){
         VerticalLayout vl = new VerticalLayout();
-        vl.setDefaultHorizontalComponentAlignment(Alignment.CENTER);
-        vl.addClassName("h2_vl");
-
-        VerticalLayout vl1 = new VerticalLayout();
-        vl1.addClassName("h2_vl1");
-
-        HorizontalLayout hl = new HorizontalLayout();
-        hl.addClassName("hl2_hor");
-
-        Image icon1 = new Image("icons/vb.svg", "Vertical Bar");
-        icon1.addClassName("h_icon1");
-        icon1.setWidth("20px");
-
-        H1 fh = new H1("Our Best Sellers");
-        fh.addClassName("h_fh2");
-
-        hl.add(icon1, fh);
 
         FlexLayout fl = new FlexLayout();
         fl.setWidthFull();
@@ -92,9 +107,7 @@ public class HomeView extends VerticalLayout {
                 getDiv( "hImage8","4.7", "Agricyclers", " Waste Bin Bag", "€2.50", "€4.00")
         );
 
-        vl1.add(hl, fl);
-
-        vl.add(vl1);
+        vl.add(fl);
         return vl;
     }
 
@@ -169,74 +182,6 @@ public class HomeView extends VerticalLayout {
         return div0;
     }
 
-    public VerticalLayout getLayer3(){
-        VerticalLayout vl = new VerticalLayout();
-        vl.setDefaultHorizontalComponentAlignment(Alignment.CENTER);
-        vl.addClassName("h3_vl");
-
-        VerticalLayout vl1 = new VerticalLayout();
-        vl1.addClassName("h3_vl1");
-
-        HorizontalLayout hl = new HorizontalLayout();
-        hl.addClassName("hl3_hor");
-
-        H1 fh = new H1("Our Values");
-        fh.addClassName("h3_fh2");
-
-        hl.add(fh);
-
-        FlexLayout fl = new FlexLayout();
-        fl.setWidthFull();
-        fl.setAlignItems(Alignment.START);
-        fl.setFlexWrap(FlexLayout.FlexWrap.WRAP);
-        fl.setAlignContent(FlexLayout.ContentAlignment.CENTER);
-        fl.addClassName("h3_fl");
-        fl.add(
-                getDiv3("1/", "Results", "Everything we do is driven by our commitment to sustainability, utilizing proven methods and eco-friendly practices to deliver effective waste management solutions that support a cleaner future for your business and community."),
-                getDiv3("2/", "Expertise", "Our services are provided by certified professionals with years of experience in sustainable waste management, ensuring reliable and eco-friendly solutions you can trust."),
-                getDiv3("3/", "Transparency", "We prioritize transparency in everything we do, working closely with you at every step to provide clear, reliable waste management solutions tailored to your needs, fostering a partnership built on trust."),
-                getDiv3("4/", "Flexibility", "Agricyclers’ services are fully tailored to meet the unique waste management needs of each client. We provide adaptable solutions that evolve with you, ensuring effective and sustainable results both now and in the future.")
-        );
-
-        vl1.add(hl, fl);
-
-        vl.add(vl1);
-        return vl;
-    }
-
-    public Div getDiv3(String str1, String str2, String str3){
-        Div div0 = new Div();
-        div0.addClassName("h3_div0");
-        VerticalLayout div = new VerticalLayout();
-        //div.setPadding(false);
-        //div.setSpacing(false);
-        div.addClassName("h3_dv");
-
-        VerticalLayout div1 = new VerticalLayout();
-        div1.addClassName("h3_dv1");
-        div1.setSpacing(false);
-        div1.setPadding(false);
-
-        HorizontalLayout hl1a = new HorizontalLayout();
-        hl1a.addClassName("h3l1a");
-
-        H1 rr1 = new H1(str1);
-        rr1.addClassName("h3_rr1");
-
-        H1 rr2 = new H1(str2);
-        rr2.addClassName("h3_rr2");
-
-        hl1a.add(rr1, rr2);
-
-        H1 rr3 = new H1(str3);
-        rr3.addClassName("h3_rr3");
-        div1.add(hl1a, rr3);
-
-        div.add(div1);
-        div0.add(div);
-        return div0;
-    }
-
     public VerticalLayout getLayer4(){
         VerticalLayout vl = new VerticalLayout(); vl.addClassName("h4_vl");
         vl.setDefaultHorizontalComponentAlignment(Alignment.CENTER);
@@ -248,8 +193,7 @@ public class HomeView extends VerticalLayout {
         H1 h13 = new H1("Get 10% off your first order"); h13.addClassName("h4_h13");
         TextField h14 = new TextField(); h14.addClassName("h4_h14");
         h14.setPlaceholder("Enter your email");
-        Image icon1 = new Image("icons/send.svg", "Send Icon");
-        icon1.addClassName("h4_icon1");
+        Image icon1 = new Image("icons/send.svg", "Send Icon"); icon1.addClassName("h4_icon1");
         Button button1 = new Button(icon1); button1.addClassName("h4_button1");
         h14.setSuffixComponent(button1);
         VerticalLayout vv1 = new VerticalLayout(); vv1.addClassName("h4_vv1");
@@ -320,4 +264,6 @@ public class HomeView extends VerticalLayout {
         vl.add(vl1, hr, hle);
         return vl;
     }
+
+
 }

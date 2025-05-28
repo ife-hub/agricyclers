@@ -51,11 +51,11 @@ public class Layout extends AppLayout {
         logo.addClassName("aglogo2");
         HorizontalLayout logoHl = new HorizontalLayout(logo);
         logoHl.addClassName("logoHl");
-        RouterLink link1 = new RouterLink("HOME", HomeView.class);
-        RouterLink link2 = new RouterLink("PRODUCTS", LoginView.class);
-        RouterLink link3 = new RouterLink("ABOUT", AboutView.class);
-        RouterLink link4 = new RouterLink("SERVICE", LoginView.class);
-        RouterLink link5 = new RouterLink("CONTACT US", LoginView.class);
+        RouterLink link1 = new RouterLink("HOMEEE", HomeView.class);
+        RouterLink link2 = new RouterLink("PRODUCTS", ProductView.class);
+        RouterLink link3 = new RouterLink("ABOUTT", AboutView.class);
+        RouterLink link4 = new RouterLink("SERVICEE", ServicesView.class);
+        RouterLink link5 = new RouterLink("CONTACT US", ContactUs.class);
         link1.addClassName("rl"); link2.addClassName("rl"); link3.addClassName("rl"); link4.addClassName("rl"); link5.addClassName("rl");
         link1.getHighlightAction();
         hl2.add(link1, link2, link3, link4, link5);
@@ -88,7 +88,6 @@ public class Layout extends AppLayout {
         logoHl.setJustifyContentMode(FlexComponent.JustifyContentMode.START);
         hl2.setJustifyContentMode(FlexComponent.JustifyContentMode.CENTER);
         iconHl.setJustifyContentMode(FlexComponent.JustifyContentMode.END);
-
 
         bottomLayout.add(topNavHl);
         //bottomLayout.setDefaultHorizontalComponentAlignment(FlexComponent.Alignment.CENTER);
